@@ -1,0 +1,56 @@
+注意””的全形及半全形
+
+
+
+   sudo -s //使用root權限
+
+1、 apachectl stop
+
+2、 apachectl start
+
+
+
+3、 apachectl configtest
+
+
+
+4、/etc/apache2/httpd.conf
+
+
+
+
+
+# DocumentRoot "/Library/WebServer/Documents"
+
+# <Directory "/Library/WebServer/Documents/">
+
+
+
+ DocumentRoot "/Users/paopao/sites"
+
+ <Directory "/Users/paopao/sites/">
+
+
+
+5、/private/etc/apache2/users/paopao.conf
+
+<Directory "/Users/paopao/sites/">
+
+
+
+AllowOverride All
+
+Options Indexes MultiViews FollowSymLinks
+
+Require all granted
+
+
+</Directory>
+
+
+
+
+
+
+
+6./Users/paopao/sites(新增sites目錄)
